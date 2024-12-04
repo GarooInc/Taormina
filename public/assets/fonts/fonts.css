@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Bahiana';
+    src: url('Bahiana.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'book-antiqua';
+    src: url('book-antiqua.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bell';
+    src: url('BellMT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    src: url('BellMT.eot'); /* IE9 Compat Modes */
+    src: url('BellMT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('BellMT.woff2') format('woff2'), /* Super Modern Browsers */
+    url('BellMT.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('Montserrat-Italic-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}

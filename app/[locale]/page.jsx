@@ -53,7 +53,7 @@ export default async function Menu({ params: { locale }}) {
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <main className="page bg-white pb-20 md:py-10">
             <div className='flex flex-col justify-center items-center w-full'>
-                <img src="/assets/images/logo_v1.png" alt="logo" className="w-[150px]" />
+                <img src="/assets/images/logo_v2.png" alt="logo" className="w-[150px]" />
                 <div className="flex flex-col justify-center items-center py-4 w-full px-10">
                     <span className="text-primary text-md font-book italic text-center leading-6 tracking-wide my-4 py-4">
                         {(t('welcome:content'))}

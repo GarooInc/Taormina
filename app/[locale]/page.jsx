@@ -51,7 +51,7 @@ export default async function Menu({ params: { locale }}) {
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <main className="page bg-white pt-10 pb-20 md:py-10">
+        <main className="page bg-white pb-20 md:py-10">
             <div className='flex flex-col justify-center items-center w-full'>
                 <img src="/assets/images/logo_v1.png" alt="logo" className="w-[150px]" />
                 <div className="flex flex-col justify-center items-center py-4 w-full px-10">

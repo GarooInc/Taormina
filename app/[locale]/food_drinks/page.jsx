@@ -15,7 +15,7 @@ export default async function FoodDrinks({ params: { locale }}) {
 return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <div className="page bg-primary">
-            <HeaderItem v={"v3"} transparent/>
+            <HeaderItem v={"v3"} transparent whiteArrow/>
             <h1 className="italictiempos_title text-secondary">{t('food_drinks:title')}</h1>
             <FoodDrinksItem />
         </div>

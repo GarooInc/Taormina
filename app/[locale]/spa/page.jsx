@@ -19,7 +19,7 @@ return (
             <h1 className="italictiempos_title text-quaternary">Spa</h1>
             <LanguageSwitcher />
             <TabCartItem collection={"spa"} />
-            <FooterItem transparent logo={"v1"}/>
+            <FooterItem transparent logo={"v4"}/>
         </div>
     </TranslationsProvider>
   )

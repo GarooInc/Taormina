@@ -43,7 +43,7 @@ const FoodDrinksItem = () => {
                 <div key={index} className='food_drinks_inner'>
                     <img className="food_drinks_img" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.cover_img}?token=`} alt={item.name} />
                     <div className='food_drinks_info'>
-                        <h3 className="food_drinks_title">{item[`name_${currentLocale}`]}</h3>
+                        <h3 className="food_drinks_title">{item[`title_${currentLocale}`]}</h3>
                         <div className='food_drinks_description_container'>
                             <span className='food_drinks_description'>{item[`description_${currentLocale}`]}</span>
                         </div>

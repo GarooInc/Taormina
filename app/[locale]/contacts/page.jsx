@@ -16,11 +16,11 @@ return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <div className="page bg-white">
             <HeaderItem v={"v2"} transparent/>
-            <div className='info_container px-10'>
+            <div className='px-10 w-full'>
                 <h1 className="principal_title italic">{t('contacts:title')}</h1>
                 <HotelExtension />
             </div>
-            <FooterItem  transparent logo={"v2"}/>
+            <FooterItem transparent logo={"v2"}/>
         </div>
         <LanguageSwitcher />
     </TranslationsProvider>

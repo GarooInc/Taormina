@@ -15,10 +15,10 @@ export default async function Menu({ params: { locale }}) {
             title: t('home:nav2'),
             link: '/frontdesk'
         },
-        {
-            title: t('home:nav3'),
-            link: '/housekeeping'
-        },
+        // {
+        //     title: t('home:nav3'),
+        //     link: '/housekeeping'
+        // },
         {
             title: t('home:nav4'),
             link: '/amenities'
@@ -31,14 +31,14 @@ export default async function Menu({ params: { locale }}) {
             title: t('home:nav6'),
             link: '/activities'
         },
-        {
-            title: t('home:nav7'),
-            link: '/adventures'
-        },
-        {
-            title: t('home:nav13'),
-            link: '/spa'
-        },
+        // {
+        //     title: t('home:nav7'),
+        //     link: '/adventures'
+        // },
+        // {
+        //     title: t('home:nav13'),
+        //     link: '/spa'
+        // },
         {
             title: t('home:nav14'),
             link: '/contacts'

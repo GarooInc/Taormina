@@ -32,7 +32,7 @@ export default function Experience({ params: { locale, experienceId }}) {
             </div>
         </div>
         <LanguageSwitcher />
-        <FooterItem fixed/>
+        <FooterItem logo={"v1"} />
     </div>
     </TranslationsProvider>
   )

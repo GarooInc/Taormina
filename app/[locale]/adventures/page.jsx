@@ -14,11 +14,11 @@ export default async function Adventures({ params: { locale }}) {
 
 return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <div className="page bg-secondary relative">
+        <div className="page bg-white relative">
             <HeaderItem v={"v3"} transparent/>
             <h1 className="italictiempos_title text-quaternary">{t('adventures:title')}</h1>
-            <TabCartItem collection={"adventures"} noTags />
-            <FooterItem transparent logo={"v4"}/>
+            <TabCartItem collection={"Adventures"} noTags />
+            <FooterItem transparent logo={"v1"}/>
         </div>
         <LanguageSwitcher />
     </TranslationsProvider>

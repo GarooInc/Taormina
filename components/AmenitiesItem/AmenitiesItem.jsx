@@ -34,11 +34,11 @@ const AmenitiesItem = () => {
     <div className="grid grid-cols-2 gap-4 md:grid-cols-4 grid-flow-row-dense auto-rows-auto p-10 w-full">
         {
             experiences.map((item, index) => (
-                <div key={index} className={`pb-12 gap-2 flex flex-col relative cursor-pointer`}
+                <div key={index} className={`pb-12 flex flex-col relative cursor-pointer`}
                     onClick={() => router.push(`/experience/${item.id}`)} style={{backgroundColor: item.background_color}}>
                     <img className="w-full md:h-60 h-32  object-cover" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.image}?token=`} alt={item.name} />
-                    <div className='flex justify-center items-center'>
-                        <h3 className={`text-base leading-tight font-book mt-2 uppercase text-center`} style={{color: item.text_color}}>{item[`title_${currentLocale}`]}</h3>
+                    <div className='flex justify-center items-center bg-secondary p-2'>
+                        <h3 className={`text-primary leading-tight font-book mt-2 uppercase text-center`} style={{color: item.text_color}}>{item[`title_${currentLocale}`]}</h3>
                     </div>
                 </div>
             ))

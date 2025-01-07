@@ -285,7 +285,7 @@
 }
 
 .menu_btn{
-  @apply bg-quaternary text-secondary rounded-none px-8 py-2 mt-2 text-sm font-bellfont;
+  @apply bg-secondary text-primary rounded-none px-8 py-2 mt-2 text-sm font-bellfont;
 }
 
 /* phone item */

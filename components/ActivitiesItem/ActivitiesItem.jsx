@@ -40,15 +40,11 @@ const ActivitiesItem = () => {
             activities.map((item, index) => (
                 <div 
                 key={index} 
-                className={`bg-white px-2 py-4 gap-2 flex md:flex-col relative cursor-pointer 
-                ${(index + 1) % 4 !== 0 ? 'md:border-r md:border-black border-b border-black' : ''} 
-                ${(index + 1) % 2 !== 0 ? 'md:border-r md:border-black' : ''}`}>
+                className={`bg-white gap-2 md:h-full h-52 flex md:flex-col relative cursor-pointer shadow-md rounded-md`}>
                     <div className='flex justify-center w-full items-center'>
-                        <img className="md:h-60 h-28 object-cover md:object-contain" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.Image}?token=`} alt={item.name} />
+                        <img className="md:h-60 h-52 object-cover w-full md:rounded-t-md rounded-l-md" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.Image}?token=`} alt={item.name} />
                     </div>
-                    {/* añadir un separador de imagen */}
-                    <div className="separator"></div>
-                    <div className='flex flex-col gap-4  w-full'>
+                    <div className='flex flex-col gap-4 w-full p-4'>
                         <h3 className="font-book uppercase text-black">{item[`title_${currentLocale}`]}</h3>
                         <div className="activities_inner_container">
                             <FaLocationDot className="icon_activities text-md " />

@@ -20,7 +20,9 @@ return (
                 <h1 className="principal_title italic">{t('contacts:title')}</h1>
                 <HotelExtension />
             </div>
-            <FooterItem transparent logo={"v2"}/>
+            <div className='md:absolute md:bottom-0'>
+                <img src={`/assets/images/logo_v2.png`} alt="logo" className="w-[80px]" />
+            </div>
         </div>
         <LanguageSwitcher />
     </TranslationsProvider>

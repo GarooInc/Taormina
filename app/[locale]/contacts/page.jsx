@@ -16,7 +16,7 @@ return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <div className="page bg-white">
             <HeaderItem v={"v2"} transparent/>
-            <div className='info_container'>
+            <div className='info_container px-10'>
                 <h1 className="principal_title italic">{t('contacts:title')}</h1>
                 <HotelExtension />
             </div>

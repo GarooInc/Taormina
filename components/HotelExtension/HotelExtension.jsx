@@ -27,12 +27,12 @@ const HotelExtension = ({ extension, hotelName }) => {
     }, [])
 
   return (
-    <div className="flex flex-col justify-center items-center py-10 gap-4">
+    <div className="flex flex-col justify-center items-center py-10 gap-4 w-full">
     {
         contacts.map((item, index) => (
-            <div className="flex items-center gap-4 p-4 border border-primary rounded-lg shadow-sm w-60 mx-auto">
+            <div className="flex items-center gap-4 p-4 border border-primary rounded-lg shadow-md md:w-60 w-full mx-auto">
                 <div className="text-primary text-2xl">
-                    <FiPhone />
+                    <FiPhone className='text-secondary'/>
                 </div>
 
                 <div>

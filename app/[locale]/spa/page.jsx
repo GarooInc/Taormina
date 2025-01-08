@@ -15,7 +15,7 @@ export default async function Adventures({ params: { locale }}) {
 return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <div className="page bg-secondary relative">
-            <HeaderItem v={"v3"} transparent/>
+            <HeaderItem v={"v4"} transparent/>
             <h1 className="italictiempos_title text-primary">Spa</h1>
             <LanguageSwitcher />
             <TabCartItem collection={"Spa"} />

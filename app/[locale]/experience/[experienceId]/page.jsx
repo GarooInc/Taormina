@@ -24,7 +24,7 @@ export default function Experience({ params: { locale, experienceId }}) {
 
   return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-    <div className="page bg-white">
+    <div className="page bg-white relative">
         <HeaderItem v={"v2"} transparent nav={"/amenities"} />
         <div className='flex flex-col justify-center items-center w-full'>
             <div className='flex flex-col justify-center items-center w-full'>

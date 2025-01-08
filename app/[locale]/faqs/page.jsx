@@ -18,7 +18,7 @@ return (
                 <HeaderItem v={"v3"} transparent/>
                 <h2 className='italictiempos_title text-quaternary'>{t('faqs:title')}</h2>
                 <div className='flex flex-col justify-center items-center gap-4 md:w-3/4 pb-20'>
-                    <InfoDisplay collection={"FAQs"} colorlines="quaternary" coloricon="tertiary"/>
+                    <InfoDisplay collection={"FAQs"} colorlines="primary" coloricon="secondary"/>
                 </div>
             </div>
             <FooterItem transparent logo={"v1"}/>

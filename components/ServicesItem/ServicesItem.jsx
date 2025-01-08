@@ -41,7 +41,7 @@ const ServicesItem = ({ room, collection}) => {
 
         const encodedMessage = encodeURIComponent(message);
 
-        const phoneNumber = "5016144247";
+        const phoneNumber = "50660427116";
 
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 

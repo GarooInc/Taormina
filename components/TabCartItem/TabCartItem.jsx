@@ -79,11 +79,11 @@ const TabCartItem = ({ collection, noTags }) => {
                     <div className='items_container'>
                         {
                             currentLocale === 'es' ? uniqueTags_es.map((tag, index) => (
-                                <button key={index} className={`button_line ${filter === tag ? 'bg-secondary text-white' : 'text-secondary'}`} onClick={() => setFilter(tag)}>
+                                <button key={index} className={`button_line ${filter === tag ? 'bg-tertiary text-white' : 'text-primary'}`} onClick={() => setFilter(tag)}>
                                     {tag}
                                 </button>
                             )) : uniqueTags_en.map((tag, index) => (
-                                <button key={index} className={`button_line ${filter === tag ? 'bg-secondary text-white' : 'text-secondary'}`} onClick={() => setFilter(tag)}>
+                                <button key={index} className={`button_line ${filter === tag ? 'bg-tertiary text-white' : 'text-primary'}`} onClick={() => setFilter(tag)}>
                                     {tag}
                                 </button>
                             ))

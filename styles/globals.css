@@ -161,7 +161,7 @@
 }
 
 .button_line{
-    @apply text-primary tracking-widest uppercase border-b-2 border-primary px-4 py-2 mt-2 text-sm font-montserrat flex justify-center items-center;
+    @apply  tracking-widest uppercase border-b-2 border-primary px-4 py-2 mt-2 text-sm font-montserrat flex justify-center items-center;
 }
 
 

@@ -14,7 +14,7 @@ export default async function Contacts({ params: { locale }}) {
 
 return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <div className="page bg-white">
+        <div className="page bg-white relative">
             <div className='flex flex-col w-full items-center'>
                 <HeaderItem v={"v2"} transparent/>
                 <div className='px-10 w-full'>

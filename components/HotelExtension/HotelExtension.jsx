@@ -30,14 +30,14 @@ const HotelExtension = ({ extension, hotelName }) => {
     <div className="flex flex-col justify-center items-center py-10 gap-4 w-full">
     {
         contacts.map((item, index) => (
-            <div className="flex items-center gap-4 py-2 px-4 border border-primary rounded-lg shadow-md md:w-60 w-full mx-auto">
+            <div className="flex items-center gap-4 p-4 border border-primary rounded-lg shadow-md md:w-60 w-full mx-auto">
                 <div className="text-primary text-2xl">
                     <FiPhone className='text-secondary'/>
                 </div>
 
-                <div>
+                <div className='flex justify-center items-start flex-col'>
                     <h3 className="text-lg font-semibold text-primary font-bellfont">{item.name}</h3>
-                    <span className="font-medium text-primary font-book">{item.ext}</span>
+                    <span className="font-medium text-tertiary font-book">{item.ext}</span>
                 </div>
     </div>
         ))

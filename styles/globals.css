@@ -83,6 +83,10 @@
   padding-left: 10px;
 }
 
+.experiences a{
+  @apply bg-primary text-white  px-6 py-2 mt-2 text-sm font-montserrat;
+}
+
 .experiences ul li {
   margin-bottom: 1rem;
 }

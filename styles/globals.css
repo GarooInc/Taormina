@@ -272,6 +272,10 @@
   @apply font-bellfont text-secondary text-center block;
 }
 
+.btn_frontdesk{
+  @apply font-bellfont bg-secondary text-primary py-2 px-6 rounded-md uppercase;
+}
+
 /* food and drinks */
 
 .food_container{

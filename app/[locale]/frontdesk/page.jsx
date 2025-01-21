@@ -3,9 +3,7 @@ import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/components/TranslationsProvider'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import HeaderItem from '@/components/HeaderItem/HeaderItem'
-import InfoDisplay from '@/components/InfoDisplay/InfoDisplay'
 import { FaWhatsapp, FaPhone, FaWifi } from "react-icons/fa"
-import FooterItem from '@/components/FooterItem/FooterItem'
 
 const namespaces = ['frontdesk', 'header']
 
@@ -42,7 +40,7 @@ export default async function FrontDesk({ params: { locale }}) {
                             </div>
                         </div>
                     </div>
-                    <button className='font-bellfont bg-secondary text-primary py-2 px-6 rounded-md uppercase'>{t('frontdesk:button')}</button>
+                    <button className='btn_frontdesk'>{t('frontdesk:button')}</button>
             </div>
             <div className='absolute bottom-0 w-full flex-col-full py-4'>
                 <span className='frontdesk_footer'>{t('frontdesk:footer1')}</span>

@@ -14,30 +14,39 @@ export default async function FrontDesk({ params: { locale }}) {
 
     return (
         <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <div className="page bg-primary">
-            <HeaderItem v={"v4"} transparent whiteArrow/>
+        <div className="page bg-primary relative">
+            <HeaderItem v={"v1"} transparent whiteArrow/>
             <div className='info_container'>
+                <img src={`/assets/images/frontdesk/exterior.png`} alt="frontdesk" className="w-full md:h-[450px] object-cover" />
                 <h2 className='italictiempos_title text-secondary'>{t('frontdesk:title')}</h2>
-                        <div className='flex flex-col md:items-center justify-center gap-4 font-bellfont p-10 w-full'>
-                            <div className="fontdesk_item">
-                                <FaWhatsapp className="mr-2 text-secondary text-2xl" />
-                                <a href="https://wa.me/50660427116" className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:whatsapp')} </span><span> +506 60427116</span></a>
-                            </div>
-                            <div className="fontdesk_item">
-                                <FaPhone className="mr-2 text-secondary text-2xl" />
-                                <a href="tel:+506 4055 5555" className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:phone')} </span><span> 4055 5555 ext. 100</span></a>
-                            </div>
-                            <div className="fontdesk_item">
-                                <FaWifi className="mr-2 text-secondary text-2xl" />
+                <p className='font-bellfont text-secondary text-center px-10 py-4'>{t('frontdesk:description')}</p>
+                    <div className='flex md:items-center justify-center gap-4 font-bellfont px-10 w-full py-10'>
+                        <div className="fontdesk_item">
+                            <FaWhatsapp className="frontdesk_icon" />
+                            <a href="https://wa.me/50660427116" className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:whatsapp')} </span><span> +506 60427116</span></a>
+                        </div>
+                        <div className="fontdesk_item">
+                            <FaPhone className="frontdesk_icon" />
+                            <a href="tel:+506 4055 5555" className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:phone')} </span><span> 4055 5555 ext. 100 | 101 |102</span></a>
+                        </div>
+                        <div className="fontdesk_item">
+                            <FaWifi className="frontdesk_icon" />
+                            <div className='flex flex-col gap-0'>
                                 <span className="fontdesk_item_text uppercase">WiFi</span>
-                                <span className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:wifi_name')}: </span></span>
-                                <div className='flex justify-center items-center gap-2'>
-                                    <span className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:wifi_password')}:</span></span>
-                                    <span className='fontdesk_item_text'></span>
-                                </div>
+                                <span className="fontdesk_item_text">
+                                    {t('frontdesk:wifi_name')}
+                                </span>
+                                <span className="fontdesk_item_text">
+                                    {t('frontdesk:wifi_password')}
+                                </span>
                             </div>
                         </div>
-                <InfoDisplay collection="Front_Desk" colorlines="white" coloricon="primary" />
+                    </div>
+                    <button className='font-bellfont bg-secondary text-primary py-2 px-6 rounded-md uppercase'>{t('frontdesk:button')}</button>
+            </div>
+            <div className='absolute bottom-0 w-full flex-col-full'>
+                <span className='frontdesk_footer'>{t('frontdesk:footer1')}</span>
+                <span className='frontdesk_footer'>{t('frontdesk:footer2')}</span>
             </div>
         </div>
         <LanguageSwitcher />

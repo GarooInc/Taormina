@@ -257,11 +257,19 @@
 
 /* front desk */
 .fontdesk_item{
-  @apply flex items-center flex-col gap-2;
+  @apply flex items-center flex-col gap-2 flex-1;
 }
 
 .fontdesk_item_text{
-  @apply md:text-lg text-secondary flex flex-col items-center text-center justify-center;
+  @apply md:text-lg text-sm text-secondary flex flex-col items-center text-center justify-center;
+}
+
+.frontdesk_icon{
+  @apply mr-2 text-secondary text-4xl;
+}
+
+.frontdesk_footer{
+  @apply font-bellfont text-secondary text-center block;
 }
 
 /* food and drinks */

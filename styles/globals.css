@@ -92,18 +92,7 @@
   @apply text-black text-sm font-bellfont font-medium tracking-tight w-3/5;
 }
 
-.experiences ul {
-  list-style: inside;
-  padding-left: 10px;
-}
 
-.experiences a{
-  @apply bg-primary text-white  px-6 py-2 mt-2 text-sm font-montserrat;
-}
-
-.experiences ul li {
-  margin-bottom: 1rem;
-}
 
 .green_button{
   @apply bg-primary text-white  px-6 py-2 mt-2 text-sm font-montserrat;
@@ -274,6 +263,37 @@
 
 .btn_frontdesk{
   @apply font-bellfont bg-secondary text-primary py-2 px-6 rounded-md uppercase;
+}
+
+/* amenities */
+
+.experiences table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.experiences th, .experiences td {
+  border: 1px solid #5a4533;
+  padding: 8px;
+  text-align: left;
+  font-family: 'bellfont';
+}
+
+.experiences ul {
+  list-style: inside;
+  padding-left: 10px;
+}
+
+.experiences a{
+  @apply bg-primary text-white px-6 py-3 text-sm font-book rounded-md;
+}
+
+.experiences ul li {
+  margin-bottom: 1rem;
+}
+
+.experiences p{
+  @apply font-bellfont text-black text-lg tracking-wide leading-5;
 }
 
 /* food and drinks */

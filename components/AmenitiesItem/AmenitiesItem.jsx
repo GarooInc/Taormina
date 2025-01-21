@@ -18,7 +18,7 @@ const AmenitiesItem = () => {
         const fetchData = async () => {
             try {
                 const records = await pb.collection('Amenities').getFullList({
-                    sort: '-created',
+                    sort: 'order_num',
                 });
                 console.log(records)
                 setExperiences(records);

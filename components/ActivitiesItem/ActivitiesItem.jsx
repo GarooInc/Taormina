@@ -7,7 +7,7 @@ import { BsClock } from "react-icons/bs";
 import { useTranslation } from 'react-i18next'
 
 
-const ActivitiesItem = () => {
+const ActivitiesItem = ({tag}) => {
     const [activities, setActivities] = useState([])
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
 
@@ -20,7 +20,7 @@ const ActivitiesItem = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const records = await pb.collection('Activities_Calendar').getFullList({
+                const records = await pb.collection('Activities').getFullList({
                     sort: '-created',
                 });
                 console.log(records)
@@ -37,12 +37,12 @@ const ActivitiesItem = () => {
   return (
     <div className="activities_container">
         { 
-            activities.map((item, index) => (
+            activities.filter(item => item.tag === tag).map((item, index) => (
                 <div 
                 key={index} 
-                className={`bg-white gap-2 md:h-full h-52 flex md:flex-col relative cursor-pointer shadow-md rounded-md`}>
+                className={`bg-white gap-2 md:h-full h-60 flex md:flex-col relative cursor-pointer shadow-md rounded-md`}>
                     <div className='flex justify-center w-full items-center'>
-                        <img className="md:h-60 h-52 object-cover w-full md:rounded-t-md rounded-l-md" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.Image}?token=`} alt={item.name} />
+                        <img className="h-60 object-cover w-full md:rounded-t-md rounded-l-md" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.Image}?token=`} alt={item.name} />
                     </div>
                     <div className='flex flex-col gap-4 w-full p-4'>
                         <h3 className="font-book uppercase text-black">{item[`title_${currentLocale}`]}</h3>
@@ -59,6 +59,7 @@ const ActivitiesItem = () => {
                             <p className='activities_inner_text'>{item[`date_${currentLocale}`]}</p>
                         </div>
                     </div>
+                    <button className="absolute bottom-2 right-2 bg-secondary text-primary p-2 rounded-md font-book text-xs">{currentLocale === 'en' ? 'Book Now' : 'Reservar'}</button>
                 </div>
             ))
         }

@@ -1,8 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import PocketBase from 'pocketbase';
-import { MdLocationPin } from "react-icons/md";
-import { TbClockHour3Filled } from "react-icons/tb";
 import { useTranslation } from 'react-i18next';
 
 
@@ -17,7 +15,7 @@ const FoodDrinksItem = () => {
         window.open(`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.menu_pdf}?token=`);
     };
     
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
     const currentLocale = i18n.language;
 
     useEffect(() => {
@@ -45,18 +43,13 @@ const FoodDrinksItem = () => {
                     <div className='food_drinks_info'>
                         <h3 className="food_drinks_title">{item[`title_${currentLocale}`]}</h3>
                         <div className='food_drinks_description_container'>
-                            <span className='food_drinks_description'>{item[`description_${currentLocale}`]}</span>
+                            <div className="food_drinks_description" dangerouslySetInnerHTML={{ __html: item[`description_${currentLocale}`] }}></div>
                         </div>
-                        <div className='food_drinks_icons_container'>
-                                <p className="food_drinks_text">
-                                    <MdLocationPin className="text-secondary text-md" />
-                                    {item[`location_${currentLocale}`]}
-                                </p>
-                                <p className="food_drinks_text">
-                                    <TbClockHour3Filled className="text-secondary text-md" />
-                                    {item.open} - {item.closes}
-                                </p>
-                                <button className='menu_btn' onClick={() => openPdf(item)}>Menu</button>
+                        <div className='grid grid-cols-2 grid-rows-2 gap-4'>
+                            <button className="menu_btn" onClick={() => openPdf(foodDrinks[0])}>{t('food_drinks:btn1')}</button>
+                            <button className="menu_btn" onClick={() => openPdf(foodDrinks[1])}>{t('food_drinks:btn2')}</button>
+                            <button className="menu_btn" onClick={() => openPdf(foodDrinks[2])}>{t('food_drinks:btn3')}</button>
+                            <button className="menu_btn" onClick={() => openPdf(foodDrinks[3])}>{t('food_drinks:btn4')}</button>
                         </div>
                     </div>
                 </div>

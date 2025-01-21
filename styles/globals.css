@@ -311,19 +311,16 @@
 }
 
 .food_drinks_info {
-  @apply flex flex-col p-10  bg-primary gap-4;
+  @apply flex flex-col py-10  bg-white gap-4 justify-center items-center border-b-2 border-primary mx-10;
 }
 
 .food_drinks_title{
-  @apply md:text-4xl text-2xl leading-tight font-book mt-2 text-secondary;
+  @apply md:text-4xl text-2xl leading-tight font-book mt-2 text-black;
 }
 
-.food_drinks_description_container{
-  @apply flex flex-col gap-4 border-b border-secondary py-2;
-}
 
 .food_drinks_description{
-  @apply text-secondary md:text-lg text-sm font-bellfont leading-6 text-justify;
+  @apply text-black md:text-lg text-sm font-bellfont leading-6 text-center;
 }
 
 .food_drinks_icons_container{
@@ -331,11 +328,11 @@
 }
 
 .food_drinks_text{
-  @apply text-secondary md:text-lg text-sm font-bellfont leading-none flex gap-2 font-medium;
+  @apply text-black md:text-lg text-sm font-bellfont leading-none flex gap-2 font-medium;
 }
 
 .menu_btn{
-  @apply bg-secondary text-primary rounded-none px-8 py-2 mt-2 text-sm font-bellfont;
+  @apply bg-secondary uppercase text-white px-4 py-2 mt-2 text-sm font-bellfont rounded-md;
 }
 
 /* phone item */

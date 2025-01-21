@@ -52,6 +52,20 @@
   @apply font-bellfont leading-6 flex gap-2 font-medium text-lg;
 }
 
+.flex-col-full{
+  @apply flex flex-col justify-center items-center w-full;
+}
+
+/* home */
+.nav_container{
+  @apply flex flex-col justify-center items-center py-4 w-full px-10;
+}
+
+.description_text{
+  @apply text-primary text-lg font-book italic text-center leading-6 tracking-wide my-4 py-4;
+}
+
+
 /* activities */
 
 .icon_activities{

@@ -44,7 +44,7 @@ export default async function FrontDesk({ params: { locale }}) {
                     </div>
                     <button className='font-bellfont bg-secondary text-primary py-2 px-6 rounded-md uppercase'>{t('frontdesk:button')}</button>
             </div>
-            <div className='absolute bottom-0 w-full flex-col-full'>
+            <div className='absolute bottom-0 w-full flex-col-full py-4'>
                 <span className='frontdesk_footer'>{t('frontdesk:footer1')}</span>
                 <span className='frontdesk_footer'>{t('frontdesk:footer2')}</span>
             </div>

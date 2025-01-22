@@ -4,26 +4,35 @@ import TranslationsProvider from '@/components/TranslationsProvider'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import HeaderItem from '@/components/HeaderItem/HeaderItem'
 import ServicesItem from '@/components/ServicesItem/ServicesItem'
-import FooterCart from '@/components/FooterCart/FooterCart'
 
 const namespaces = ['room-services', 'header']
 
 export default async function RoomServices({ params: { locale }}) {
     const { t, resources } = await initTranslations(locale, namespaces)
+    
 
 return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-        <div className="page bg-quaternary relative pb-10">
+        <div className="page bg-white relative pb-10">
             <div className="flex flex-col w-full items-center">
-                <HeaderItem v={"v5"} transparent whiteArrow/>
-                <h2 className='italictiempos_title text-white'>{t('room-services:title')}</h2>
-                <span className='font-bellfont px-10 text-center text-secondary'>
-                    {t('room-services:text1')}
+                <HeaderItem v={"v2"} transparent nav={"/food_drinks"} />
+                <h2 className='italictiempos_title text-secondary'>{t('room-services:title')}</h2>
+                <span className='font-bellfont px-10 text-center text-black text-lg'>
+                    {t('room-services:description')}
                 </span>
-
-                <ServicesItem room={true} collection={"room_services"}/>
+                <span className='font-bellfont px-10 text-center text-secondary text-lg'>
+                    {t('room-services:text')}
+                </span>
+                <ServicesItem collection={"Room_Service"}/>
+                <div className='flex md:flex-row flex-col w-full items-center justify-center gap-4'>
+                    <a className="menu_btn bg-secondary w-40 text-center" href="https://taormina.garooinc.com/api/files/jgcp8y1pnbgek6b/dut3fb1a0b4v1uv/menu_a_la_carta_ingle_s_0nVDrhOCE2.pdf?token=" target="_blank" rel="noreferrer">
+                        {t('room-services:btn1')}
+                    </a>
+                    <a className="menu_btn bg-primary w-40 text-center" href="https://api.whatsapp.com/send/?phone=50660427116&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
+                        {t('room-services:btn2')}
+                    </a>
+                </div>
             </div>
-            <FooterCart transparent/>
         </div>
         <LanguageSwitcher />
     </TranslationsProvider>

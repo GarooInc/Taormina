@@ -332,7 +332,12 @@
 }
 
 .menu_btn{
-  @apply bg-secondary uppercase text-white px-4 py-2 mt-2 text-sm font-bellfont rounded-md;
+  @apply uppercase text-white px-4 py-2 mt-2 text-sm font-bellfont rounded-md;
+}
+
+/* activities */
+.activities_btn{
+  @apply absolute bottom-2 right-2 bg-secondary text-primary p-2 rounded-md font-book text-xs hover:bg-secondary/60;
 }
 
 /* phone item */

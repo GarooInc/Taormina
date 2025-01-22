@@ -23,7 +23,6 @@ const ActivitiesItem = ({tag}) => {
                 const records = await pb.collection('Activities').getFullList({
                     sort: '-created',
                 });
-                console.log(records)
                 setActivities(records);
             } catch (error) {
                 console.error("Error fetching data: ", error)
@@ -59,7 +58,7 @@ const ActivitiesItem = ({tag}) => {
                             <p className='activities_inner_text'>{item[`date_${currentLocale}`]}</p>
                         </div>
                     </div>
-                    <button className="absolute bottom-2 right-2 bg-secondary text-primary p-2 rounded-md font-book text-xs">{currentLocale === 'en' ? 'Book Now' : 'Reservar'}</button>
+                    <button className="activities_btn">{currentLocale === 'en' ? 'Book Now' : 'Reservar'}</button>
                 </div>
             ))
         }

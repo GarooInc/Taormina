@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import PocketBase from 'pocketbase';
 import { useTranslation } from 'react-i18next';
 
-const ServicesItem = ({ room, collection}) => {
+const ServicesItem = ({collection}) => {
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
     const [data, setData] = useState([]);
     const [actualProduct, setActualProduct] = useState({});
@@ -17,7 +17,6 @@ const ServicesItem = ({ room, collection}) => {
         const fetchData = async () => {
             try {
                 const records = await pb.collection(collection).getFullList({
-                    sort: 'id_number',
                 });
                 setData(records);
             } catch (error) {
@@ -27,50 +26,21 @@ const ServicesItem = ({ room, collection}) => {
         fetchData();
     }, []);
 
-    const addToCart = (item) => {
-        const updatedItem = {
-            ...item,
-            Title: item[`title_${currentLocale}`],
-            Variant: "",
-            Price: item.price || 0,
-        };
-        
-        const message = currentLocale === 'es' 
-            ? `Hola, quiero solicitar ${updatedItem.Title} por favor.`
-            : `Hello, I would like to request ${updatedItem.Title} please.`;
-
-        const encodedMessage = encodeURIComponent(message);
-
-        const phoneNumber = "50660427116";
-
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-        window.open(whatsappUrl, "_blank");
-
-        setActualProduct(updatedItem);
-    };
-
     return (
-        <div className="grid md:grid-cols-3 md:gap-10 grid-cols-2 gap-4 md:w-3/4 w-full pt-10 pb-20 px-10">
-            {room ? (
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 md:gap-10 grid-cols-1 gap-4  w-full p-10">
+              {  
                 data.map((item, index) => (
-                    <div key={index} className="pb-16 gap-2 flex flex-col relative" >
-                        <img className="object-contain h-24" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.image}?token=`} alt={item.name} />
-                        <h3 className="text-primary font-book tracking-wider uppercase">{item[`title_${currentLocale}`]}</h3>
-                        <p className="text-primary text-xs  leading-none font-bellfont font-bold">${item.price}</p>
-                        <button className='green_button absolute bottom-4 uppercase' onClick={() => addToCart(item)}>Add</button>
-                    </div>
-                ))
-            ) : (
-                data.map((item, index) => (
-                    <div className='flex' key={index}>
-                        <a href={item.link_service ? item.link_service : ""} className='flex gap-4 justify-start items-center'>
-                            <img className="md:w-20 md:h-20 w-16 rounded-full object-cover" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.image}?token=`} alt={item.name} />
-                            <span className='text-green font-bellfont infodisplay' dangerouslySetInnerHTML={{ __html: item[`title_${currentLocale}`] }}></span>
+                    <div className='flex bg-gray-50 rounded-md' key={index}>
+                        <a className='flex gap-4 justify-start items-center'>
+                            <img className="xl:w-40 xl:h-40 w-28 rounded-md object-cover" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.image}?token=`} alt={item.name} />
+                            <div className='flex flex-col gap-2'>
+                                <span className='text-secondary font-bellfont text-lg'>{item[`title_${currentLocale}`]}</span>
+                                <span className='text-black font-bellfont infodisplay text-sm' dangerouslySetInnerHTML={{ __html: item[`description_${currentLocale}`] }}></span>
+                            </div>
                         </a>
                     </div>
                 ))
-            )}
+            }
         </div>
     );
 }

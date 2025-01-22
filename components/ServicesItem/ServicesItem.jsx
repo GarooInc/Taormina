@@ -3,10 +3,9 @@ import React, { useState, useEffect } from 'react';
 import PocketBase from 'pocketbase';
 import { useTranslation } from 'react-i18next';
 
-const ServicesItem = ({collection}) => {
+const ServicesItem = ({collection, tag}) => {
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
     const [data, setData] = useState([]);
-    const [actualProduct, setActualProduct] = useState({});
     const pb = new PocketBase(`${backendUrl}`);
     pb.autoCancellation(false);
 
@@ -29,7 +28,7 @@ const ServicesItem = ({collection}) => {
     return (
         <div className="grid xl:grid-cols-3 md:grid-cols-2 md:gap-10 grid-cols-1 gap-4  w-full p-10">
               {  
-                data.map((item, index) => (
+                data && tag && data.filter(item => item.tag.includes(tag)).map((item, index) => (
                     <div className='flex bg-gray-50 rounded-md' key={index}>
                         <a className='flex gap-4 justify-start items-center'>
                             <img className="xl:w-40 xl:h-40 w-28 rounded-md object-cover" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.image}?token=`} alt={item.name} />

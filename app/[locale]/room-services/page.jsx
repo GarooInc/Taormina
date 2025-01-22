@@ -23,7 +23,7 @@ return (
                 <span className='bellfont_description text-secondary '>
                     {t('room-services:text')}
                 </span>
-                <ServicesItem collection={"Room_Service"}/>
+                <ServicesItem collection={"Services"} tag={"room_service"}/>
                 <div className='double_button'>
                     <a className="menu_btn bg-secondary w-40 text-center" href="https://taormina.garooinc.com/api/files/jgcp8y1pnbgek6b/dut3fb1a0b4v1uv/menu_a_la_carta_ingle_s_0nVDrhOCE2.pdf?token=" target="_blank" rel="noreferrer">
                         {t('room-services:btn1')}

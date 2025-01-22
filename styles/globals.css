@@ -41,7 +41,7 @@
 }
 
 .italictiempos_title{
-  @apply text-center text-4xl font-book italic py-4;
+  @apply text-center md:text-4xl text-3xl font-book uppercase italic py-4;
 }
 
 .tiempos_description{

@@ -15,7 +15,7 @@ return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <div className="page bg-white relative">
             <div className="flex flex-col w-full items-center">
-                <HeaderItem v={"v3"} transparent/>
+                <HeaderItem v={"v2"} transparent/>
                 <h2 className='italictiempos_title text-quaternary'>{t('faqs:title')}</h2>
                 <div className='flex flex-col justify-center items-center gap-4 md:w-3/4 pb-20'>
                     <InfoDisplay collection={"FAQs"} colorlines="primary" coloricon="secondary"/>

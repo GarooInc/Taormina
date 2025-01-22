@@ -36,7 +36,7 @@ return (
                         <a className="menu_btn bg-secondary min-w-48 text-center" href="https://api.whatsapp.com/send/?phone=50660427116&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
                             {t('room-services:btn1')}
                         </a>
-                        <a className="menu_btn bg-secondary min-w-48 text-center" href="https://api.whatsapp.com/send/?phone=50662635020&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
+                        <a className="menu_btn bg-secondary min-w-48 text-center" href="/puntarenas" rel="noreferrer">
                             {t('room-services:btn2')}
                         </a>
                     </div>

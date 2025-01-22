@@ -17,7 +17,7 @@ return (
         <div className="page bg-primary relative">
             <HeaderItem v={"v1"} transparent whiteArrow/>
             <div className='info_container'>
-                <h1 className="principal_title italic">{t('amenities:title')}</h1>
+                <h1 className="italictiempos_title text-secondary">{t('amenities:title')}</h1>
                 <AmenitiesItem/>
             </div>
             <FooterItem  transparent logo={"v1"}/>

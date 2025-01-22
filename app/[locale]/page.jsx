@@ -31,7 +31,7 @@ export default async function Menu({ params: { locale }}) {
         },
         {
             title: t('home:nav16'),
-            link: '/virtualcasino'
+            link: '/virtual-casino'
         },
         {
             title: t('home:nav17'),

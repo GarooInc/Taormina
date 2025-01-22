@@ -49,7 +49,7 @@
 }
 
 .bellfont_description{
-  @apply font-bellfont px-10 text-center font-medium text-lg;
+  @apply font-bellfont px-10 text-center font-medium text-lg italic;
 }
 
 .flex-col-full{

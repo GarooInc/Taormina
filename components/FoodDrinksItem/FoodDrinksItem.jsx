@@ -52,7 +52,7 @@ const FoodDrinksItem = () => {
                 <div key={index} className='main_info_container_inner'>
                     <img className="food_drinks_img" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.cover_img}?token=`} alt={item.name} />
                     <div className='main_info_container'>
-                        <h3 className="food_drinks_title">{item[`title_${currentLocale}`]}</h3>
+                        <img className="w-60" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.logo}?token=`} alt={item.name} />
                         <div className='food_drinks_description_container'>
                             <div className="food_drinks_description" dangerouslySetInnerHTML={{ __html: item[`description_${currentLocale}`] }}></div>
                         </div>

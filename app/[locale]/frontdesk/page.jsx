@@ -15,7 +15,7 @@ export default async function FrontDesk({ params: { locale }}) {
         <div className="page bg-primary relative">
             <HeaderItem v={"v1"} transparent whiteArrow/>
             <div className='info_container'>
-                <img src={`/assets/images/frontdesk/exterior.png`} alt="frontdesk" className="w-full md:h-[450px] object-cover" />
+                <img src={`/assets/images/frontdesk/exterior.png`} alt="frontdesk" className="principal_banner" />
                 <h2 className='italictiempos_title text-secondary'>{t('frontdesk:title')}</h2>
                 <p className='font-bellfont text-secondary text-center px-10 py-4'>{t('frontdesk:description')}</p>
                     <div className='flex md:items-center justify-center gap-4 font-bellfont px-10 w-full py-10'>

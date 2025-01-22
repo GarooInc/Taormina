@@ -49,11 +49,27 @@
 }
 
 .bellfont_description{
-  @apply font-bellfont leading-6 flex gap-2 font-medium text-lg;
+  @apply font-bellfont px-10 text-center font-medium text-lg;
 }
 
 .flex-col-full{
   @apply flex flex-col justify-center items-center w-full;
+}
+
+.principal_banner{
+  @apply w-full md:h-[450px] h-[250px] object-cover;
+}
+
+.double_button{
+  @apply flex md:flex-row flex-col items-center justify-center gap-4;
+}
+
+.main_info_container {
+  @apply flex flex-col py-10  bg-white gap-4 justify-center items-center border-b-2 border-primary mx-10 md:border-none;
+}
+
+.main_info_container_inner{
+  @apply flex flex-col w-full;
 }
 
 /* home */
@@ -302,16 +318,9 @@
   @apply flex flex-col w-full;
 }
 
-.food_drinks_inner{
-  @apply flex flex-col w-full;
-}
 
 .food_drinks_img{
   @apply w-full h-96 object-cover relative;
-}
-
-.food_drinks_info {
-  @apply flex flex-col py-10  bg-white gap-4 justify-center items-center border-b-2 border-primary mx-10;
 }
 
 .food_drinks_title{

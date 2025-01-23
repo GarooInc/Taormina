@@ -36,6 +36,7 @@
         "secondary": "#c9b89a",
         "tertiary": "#a68428",
         "quaternary": "#a68428",
+        "quinary": "#009148",
       },
       placeholderColor: {
         'custom-green': '#6C7731',

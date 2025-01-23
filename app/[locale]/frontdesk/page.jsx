@@ -18,6 +18,7 @@ export default async function FrontDesk({ params: { locale }}) {
                 <img src={`/assets/images/frontdesk/exterior.png`} alt="frontdesk" className="principal_banner" />
                 <h2 className='italictiempos_title text-secondary'>{t('frontdesk:title')}</h2>
                 <p className='font-bellfont text-secondary text-center px-10 py-4'>{t('frontdesk:description')}</p>
+                <p className='font-bellfont text-secondary text-center px-10 py-4'>{t('frontdesk:description-secondary')}</p>
                     <div className='flex md:items-center justify-center gap-4 font-bellfont px-10 w-full py-10'>
                         <div className="fontdesk_item">
                             <FaWhatsapp className="frontdesk_icon" />

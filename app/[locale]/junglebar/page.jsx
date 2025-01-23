@@ -5,6 +5,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import HeaderItem from '@/components/HeaderItem/HeaderItem'
 import ServicesItem from '@/components/ServicesItem/ServicesItem'
 import Link from 'next/link'
+import FooterItem from '@/components/FooterItem/FooterItem'
 
 
 const namespaces = ['jungle-bar', 'header']
@@ -38,20 +39,21 @@ return (
                 <h2 className='italictiempos_title text-quinary'>{t('jungle-bar:subtitle1')}</h2>
                 <ServicesItem collection={"Services"} tag={"bar"} color={"quinary"}/>
                 <div className='flex flex-wrap justify-center items-center gap-4 px-10'>
-                        <Link className="menu_btn bg-quinary tracking-tighter flex-1 text-center" href="https://taormina.garooinc.com/api/files/jgcp8y1pnbgek6b/dut3fb1a0b4v1uv/menu_a_la_carta_ingle_s_0nVDrhOCE2.pdf?token=" target="_blank" rel="noreferrer">
+                        <Link className="menu_btn bg-quinary tracking-tighter flex-1 text-center" href="/junglebar/events"  rel="noreferrer">
                             {t('jungle-bar:btn4')}
                         </Link>
-                        <Link className="menu_btn bg-quinary tracking-tighter flex-1 text-center" href="https://api.whatsapp.com/send/?phone=50660427116&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
+                        <Link className="menu_btn bg-quinary tracking-tighter flex-1 text-center" href="/junglebar/promos"  rel="noreferrer">
                             {t('jungle-bar:btn5')}
                         </Link>
-                        <Link className="menu_btn bg-quinary tracking-tighter flex-1 text-center" href="https://api.whatsapp.com/send/?phone=50660427116&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
+                        <Link className="menu_btn bg-quinary tracking-tighter flex-1 text-center" href="/junglebar/packages"  rel="noreferrer">
                             {t('jungle-bar:btn6')}
                         </Link>
-                        <Link className="menu_btn bg-quinary tracking-tighter flex-1 text-center" href="https://api.whatsapp.com/send/?phone=50660427116&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
+                        <Link className="menu_btn bg-quinary tracking-tighter flex-1 text-center" href="/junglebar/livemusic"  rel="noreferrer">
                             {t('jungle-bar:btn7')}
                         </Link>
                     </div>
             </div>
+            <FooterItem logo={"v2"} />
         </div>
         <LanguageSwitcher />
     </TranslationsProvider>

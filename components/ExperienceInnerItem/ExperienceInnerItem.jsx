@@ -48,12 +48,12 @@ const ExperienceInnerItem = ({ experienceId }) => {
                         </div>
                     </div>
                     {/* Contenido */}
-                    <div className="px-10 bg-cream md:w-1/2 flex flex-col justify-start items-start min-h-[400px] flex-grow-0">
+                    <div className="px-10 py-4 bg-cream md:w-1/2 flex flex-col md:justify-center justify-start items-center min-h-[400px] flex-grow-0">
                         <h1 className="text-2xl md:text-4xl text-start text-primary font-book font-bold">
                             {experience.title}
                         </h1>
-                        <div className="md:block hidden">
-                            <h3 className="principal_title flex justify-center items-center uppercase p-4">
+                        <div className="md:block hidden w-full">
+                            <h3 className="principal_title flex justify-center items-center uppercase p-4 w-full text-center">
                                 {experience[`title_${currentLocale}`]}
                             </h3>
                         </div>

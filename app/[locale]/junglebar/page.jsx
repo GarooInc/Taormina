@@ -55,7 +55,7 @@ return (
                         </Link>
                     </div>
             </div>
-            <div className='md:hidden block'>
+            <div className='md:hidden block w-full'>
                 <FooterItem logo={"v2"} />
             </div>
         </div>

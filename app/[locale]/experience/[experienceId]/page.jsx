@@ -24,13 +24,15 @@ export default function Experience({ params: { locale, experienceId }}) {
 
   return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
-    <div className="page bg-white relative">
+    <div className="page bg-white relative min-h-screen justify-between">
         <HeaderItem v={"v2"} transparent nav={"/amenities"} />
-          <div className='w-full text-center h-screen'>
+          <div className='w-full text-center h-full'>
               <ExperienceInnerItem experienceId={experienceId} />
           </div>
         <LanguageSwitcher />
-        <FooterItem logo={"v2"}/>
+        <div className={`w-full flex justify-center items-center md:p-8 p-4 bottom-0`}>
+          <img src={`/assets/images/logo_v2.png`} alt="logo" className="w-[80px]" /> 
+        </div>
     </div>
     </TranslationsProvider>
   )

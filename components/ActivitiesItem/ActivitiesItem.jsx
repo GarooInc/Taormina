@@ -58,7 +58,10 @@ const ActivitiesItem = ({tag}) => {
                             <p className='activities_inner_text'>{item[`date_${currentLocale}`]}</p>
                         </div>
                     </div>
-                    <button className="activities_btn">{currentLocale === 'en' ? 'Book Now' : 'Reservar'}</button>
+                    <button 
+                    onClick={() => window.open(item.link)}
+                    className="activities_btn">{currentLocale === 'en' ? 'Book Now' : 'Reservar'}
+                    </button>
                 </div>
             ))
         }

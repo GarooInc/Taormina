@@ -28,7 +28,7 @@ return (
                     <a className="menu_btn bg-secondary w-40 text-center" href="https://taormina.garooinc.com/api/files/jgcp8y1pnbgek6b/dut3fb1a0b4v1uv/menu_a_la_carta_ingle_s_0nVDrhOCE2.pdf?token=" target="_blank" rel="noreferrer">
                         {t('room-services:btn1')}
                     </a>
-                    <a className="menu_btn bg-primary w-40 text-center" href="https://api.whatsapp.com/send/?phone=50660427116&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
+                    <a className="menu_btn bg-primary w-40 text-center" href="https://api.whatsapp.com/send/?phone=50640555530&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
                         {t('room-services:btn2')}
                     </a>
                 </div>

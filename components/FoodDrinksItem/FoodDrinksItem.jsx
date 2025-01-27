@@ -60,7 +60,7 @@ const FoodDrinksItem = () => {
                             <button className="menu_btn bg-secondary" onClick={() => openMenuPdf(foodDrinks[0])}>{t('food_drinks:btn1')}</button>
                             <button className="menu_btn bg-secondary" onClick={() => openWineMenuPdf(foodDrinks[0])}>{t('food_drinks:btn2')}</button>
                             <a className="menu_btn bg-secondary" onClick={() => router.push('/room-services')} >{t('food_drinks:btn3')}</a>
-                            <button className="menu_btn bg-secondary" onClick={() => router.push('https://api.whatsapp.com/send/?phone=50660427116&text&type=phone_number&app_absent=0')} >{t('food_drinks:btn4')}</button>
+                            <button className="menu_btn bg-secondary" onClick={() => router.push('https://api.whatsapp.com/send/?phone=50664880560&text&type=phone_number&app_absent=0')} >{t('food_drinks:btn4')}</button>
                         </div>
                     </div>
                 </div>

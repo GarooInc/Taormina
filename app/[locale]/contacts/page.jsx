@@ -15,8 +15,8 @@ export default async function Contacts({ params: { locale }}) {
 return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <div className="page bg-white relative">
-            <div className='flex flex-col w-full items-center'>
-                <HeaderItem v={"v2"} transparent/>
+        <HeaderItem v={"v2"} transparent/>
+            <div className='info_container'>
                 <div className='px-10 w-full'>
                     <h1 className="principal_title italic">{t('contacts:title')}</h1>
                     <HotelExtension />

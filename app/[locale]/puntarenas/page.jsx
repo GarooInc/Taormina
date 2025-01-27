@@ -35,14 +35,16 @@ return (
                 <span className='bellfont_description text-black'>
                     {t('puntarenas:schedule3')}
                 </span>
-                <div className='flex flex-col justify-center items-center py-4 gap-2'>
+                <div className='flex flex-col justify-center items-center py-4 gap-2 md:h-40'>
+                    <a href=' https://waze.com/ul/hd1g8txbv5'>
                     <FaLocationDot className="text-white text-4xl bg-secondary rounded-full p-2" />
+                    </a>
                     <a className="menu_btn bg-secondary min-w-48 text-center" href="https://api.whatsapp.com/send/?phone=50662635020&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
                         {t('puntarenas:btn1')}
                     </a>
                 </div>
             </div>
-            <FooterItem logo={"v2"} />
+            <FooterItem logo={"v2"}/>
         </div>
         <LanguageSwitcher />
     </TranslationsProvider>

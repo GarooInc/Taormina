@@ -3,7 +3,7 @@ import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/components/TranslationsProvider'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import HeaderItem from '@/components/HeaderItem/HeaderItem'
-import { FaWhatsapp, FaPhone, FaWifi } from "react-icons/fa"
+import { FaWhatsapp, FaPhone, FaWifi , FaEnvelope } from 'react-icons/fa'
 
 const namespaces = ['frontdesk', 'header']
 
@@ -19,14 +19,18 @@ export default async function FrontDesk({ params: { locale }}) {
                 <h2 className='italictiempos_title text-secondary'>{t('frontdesk:title')}</h2>
                 <p className='font-bellfont text-secondary text-center px-10 py-4'>{t('frontdesk:description')}</p>
                 <p className='font-bellfont text-secondary text-center px-10 py-4'>{t('frontdesk:description-secondary')}</p>
-                    <div className='flex md:items-center justify-center gap-4 font-bellfont px-10 w-full py-10'>
+                    <div className='md:flex md:items-center justify-center grid grid-cols-2 gap-4 font-bellfont px-10 w-full py-10'>
                         <div className="fontdesk_item">
                             <FaWhatsapp className="frontdesk_icon" />
                             <a href="https://wa.me/50660427116" className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:whatsapp')} </span><span> +506 60427116</span></a>
                         </div>
                         <div className="fontdesk_item">
                             <FaPhone className="frontdesk_icon" />
-                            <a href="tel:+506 4055 5555" className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:phone')} </span><span> 4055 5555 ext. 100 | 101 |102</span></a>
+                            <a href="tel:+506 4055 5555" className="fontdesk_item_text"><span className='uppercase'>{t('frontdesk:phone')} </span><span> 4055 5555 ext. 100 | 101 |102 | 500</span></a>
+                        </div>
+                        <div className="fontdesk_item">
+                            <FaEnvelope className="frontdesk_icon" />
+                            <a href="mailto:bookings@taorminacr.com" className="fontdesk_item_text">bookings@taorminacr.com</a>
                         </div>
                         <div className="fontdesk_item">
                             <FaWifi className="frontdesk_icon" />

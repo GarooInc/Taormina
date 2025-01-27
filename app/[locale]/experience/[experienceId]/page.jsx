@@ -26,12 +26,11 @@ export default function Experience({ params: { locale, experienceId }}) {
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
     <div className="page bg-white relative">
         <HeaderItem v={"v2"} transparent nav={"/amenities"} />
-        <div className='flex flex-col justify-center items-center w-full'>
-            <div className='flex flex-col justify-center items-center w-full text-center'>
-                <ExperienceInnerItem experienceId={experienceId} />
-            </div>
-        </div>
+          <div className='w-full text-center h-screen'>
+              <ExperienceInnerItem experienceId={experienceId} />
+          </div>
         <LanguageSwitcher />
+        <FooterItem logo={"v2"}/>
     </div>
     </TranslationsProvider>
   )

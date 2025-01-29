@@ -19,6 +19,9 @@ return (
             <div className='info_container'>
                 <div className='px-10 w-full'>
                     <h1 className="principal_title italic">{t('contacts:title')}</h1>
+                    <a className='bellfont_description w-full flex text-secondary justify-center items-center' href="tel:+50640555555">
+                        40555555
+                    </a>
                     <HotelExtension />
                 </div>
             </div>

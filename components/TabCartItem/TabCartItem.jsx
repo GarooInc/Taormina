@@ -104,7 +104,7 @@ const TabCartItem = ({ collection, noTags }) => {
                         <div className='flex flex-col gap-4  w-full px-4'>
                             <h3 className="adventure_title">{item[`title_${currentLocale}`]}</h3>
                             <p className="text-black text-md font-bellfont leading-6 tracking-tight" dangerouslySetInnerHTML={{ __html: item[`description_${currentLocale}`] }}></p>
-                            <p className="text-primary text-sm  leading-none font-bellfont font-bold">
+                            <p className="text-primary text-lg  leading-none font-book font-bold">
                                 ${item.price}
                             </p>
                             <button className='green_button w-[200px] absolute bottom-4 right-4' onClick={() => addToCart(item)}> {currentLocale === 'es' ? 'Solicitar información' : 'Request information'}</button>

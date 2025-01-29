@@ -28,7 +28,7 @@ return (
                     <span className='bellfont_description text-black'>
                         {t('virtualcasino:text2')}
                     </span>
-                        <a className="menu_btn bg-secondary min-w-48 text-center" href="https://api.whatsapp.com/send/?phone=50660427116&text&type=phone_number&app_absent=0" target="_blank" rel="noreferrer">
+                        <a className="menu_btn bg-secondary min-w-48 text-center" href="tel:+50660582296" target="_blank" rel="noreferrer">
                             {t('virtualcasino:btn1')}
                         </a>
                 </div>

@@ -27,12 +27,12 @@ return (
                 <span className='bellfont_description text-black'>
                     {t('virtualcasino:text2')}
                 </span>
-                    <a className="menu_btn bg-secondary min-w-48 text-center" href="tel:+50660582296" target="_blank" rel="noreferrer">
+                    <a className="menu_btn bg-secondary min-w-48 text-center my-4" href="tel:+50660582296" target="_blank" rel="noreferrer">
                         {t('virtualcasino:btn1')}
                     </a>
+                <h2 className='italictiempos_title text-secondary'>{t('virtualcasino:title2')}</h2>
+                <ActivitiesItem tag={"virtual-casino"}/>
             </div>
-            <h2 className='italictiempos_title text-secondary pt-4'>{t('virtualcasino:title2')}</h2>
-            <ActivitiesItem tag={"virtual-casino"}/>
         </div>
         <LanguageSwitcher />
     </TranslationsProvider>

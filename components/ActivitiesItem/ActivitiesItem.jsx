@@ -44,18 +44,30 @@ const ActivitiesItem = ({tag}) => {
                     </div>
                     <div className='flex flex-col gap-4 w-full p-4'>
                         <h3 className="font-book uppercase text-black">{item[`title_${currentLocale}`]}</h3>
-                        <div className="activities_inner_container">
-                            <FaLocationDot className="icon_activities text-md " />
-                            <p className='activities_inner_text'>{item[`location_${currentLocale}`]}</p>
-                        </div>
-                        <div className="activities_inner_container">
-                            <FaRegCalendar className="icon_activities text-md" />
-                            <p className='activities_inner_text'>{item[`day_${currentLocale}`]}</p>
-                        </div>
-                        <div className="activities_inner_container">
-                            <BsClock className="icon_activities text-md" />
-                            <p className='activities_inner_text'>{item[`date_${currentLocale}`]}</p>
-                        </div>
+                        {
+                            item.location_es || item.location_en ? (
+                                <div className="activities_inner_container">
+                                    <FaLocationDot className="icon_activities text-md " />
+                                    <p className='activities_inner_text'>{item[`location_${currentLocale}`]}</p>
+                                </div>
+                            ) : null
+                        }
+                        {
+                            item.date_es || item.date_en ? (
+                                <div className="activities_inner_container">
+                                    <FaRegCalendar className="icon_activities text-md" />
+                                    <p className='activities_inner_text'>{item[`day_${currentLocale}`]}</p>
+                                </div>
+                            ) : null
+                        }
+                        {
+                            item.date_es || item.date_en ? (
+                                <div className="activities_inner_container">
+                                    <BsClock className="icon_activities text-md" />
+                                    <p className='activities_inner_text'>{item[`date_${currentLocale}`]}</p>
+                                </div>
+                            ) : null
+                        }
                     </div>
                     <a 
                     href={

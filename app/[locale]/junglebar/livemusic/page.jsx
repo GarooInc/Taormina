@@ -23,7 +23,7 @@ return (
                     {t('jungle-bar:livemusic')}
                 </h2>
             </div>
-            <ActivitiesItem tag={"bar-events"}/>
+            <ActivitiesItem tag={"bar-livemusic"}/>
             <FooterItem logo={"v2"} />
         </div>
         <LanguageSwitcher />

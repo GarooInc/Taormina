@@ -35,8 +35,7 @@ const ActivitiesItem = ({tag}) => {
 
   return (
     <div className="activities_container">
-        { 
-            activities.filter(item => item.tag === tag).map((item, index) => (
+            {(tag ? activities.filter(item => item.tag === tag) : activities).map((item, index) => (
                 <div 
                 key={index} 
                 className={`bg-white gap-2 md:h-full h-60 flex md:flex-col relative cursor-pointer shadow-md rounded-md`}>

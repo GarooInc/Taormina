@@ -16,7 +16,7 @@ return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
         <div className="page bg-white relative">
             <div className="flex flex-col w-full items-center">
-                <HeaderItem v={"v3"} transparent/>
+                <HeaderItem v={"v2"} transparent/>
                 <div className="w-full rounded-lg  px-10 font-bellfont text-black text-center flex flex-col justify-center items-center gap-4">
                     <h2 className='italictiempos_title text-quaternary'>{t('activities:title')}</h2>
                     <span className=' bellfont_description text-quaternary text-center'>

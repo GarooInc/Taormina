@@ -23,7 +23,7 @@ return (
                     {t('jungle-bar:packages')}
                 </h2>
             </div>
-            <ActivitiesItem tag={"bar-events"}/>
+            <ActivitiesItem tag={"bar-packages"}/>
             <FooterItem logo={"v2"} />
         </div>
         <LanguageSwitcher />

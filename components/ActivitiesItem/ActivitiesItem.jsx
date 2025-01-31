@@ -38,7 +38,7 @@ const ActivitiesItem = ({tag}) => {
         {(tag ? activities.filter(item => item.tag === tag) : activities.filter(item => ["bar-events", "casino", "restaurant"].includes(item.tag))).map((item, index) => (
                 <div 
                 key={index} 
-                className={`bg-white gap-2 md:h-full h-60 flex md:flex-col relative cursor-pointer shadow-md rounded-md`}>
+                className={`bg-white md:h-full h-60 flex md:flex-col relative cursor-pointer shadow-md rounded-md`}>
                     <div className='flex justify-center w-full items-center'>
                         <img className="h-60 object-cover w-full md:rounded-t-md rounded-l-md" src={`${backendUrl}/api/files/${item.collectionId}/${item.id}/${item.Image}?token=`} alt={item.name} />
                     </div>

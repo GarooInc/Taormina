@@ -320,7 +320,7 @@
 
 
 .food_drinks_img{
-  @apply w-full h-96 object-cover relative;
+  @apply w-full h-96 md:h-[600px] object-cover relative;
 }
 
 .food_drinks_title{

@@ -18,7 +18,7 @@ return (
         <div className="page bg-white relative">
             <HeaderItem v={"v2"} transparent/>
             <div className='info_container'>
-                <img src={`/assets/images/casino/casino.jpeg`} alt="casino" className="principal_banner" />
+                <img src={`/assets/images/casino/puntarenas.JPG`} alt="casino" className="principal_banner" />
                 <h2 className='italictiempos_title text-secondary'>{t('puntarenas:title')}</h2>
                 <span className='bellfont_description text-black py-4'>
                     {t('puntarenas:description')}

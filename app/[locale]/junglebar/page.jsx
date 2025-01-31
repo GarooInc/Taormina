@@ -18,7 +18,7 @@ return (
         <div className="page bg-white relative">
             <HeaderItem v={"v2"} transparent/>
             <div className='info_container'>
-                <img src={`/assets/images/jungle-bar/banner.jpeg`} alt="virtualcasino" className="principal_banner" />
+                <img src={`/assets/images/jungle-bar/banner.JPG`} alt="virtualcasino" className="principal_banner" />
                 <img className="w-60" src={`/assets/images/jungle-bar/logo.png`} alt={"logo"} />
                 <span className='bellfont_description text-black'>
                         {t('jungle-bar:description')}

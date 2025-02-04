@@ -1,6 +1,7 @@
 import "@/styles/globals.css"
 import "@/public/assets/fonts/fonts.css"
 import { CartProvider } from '@/contexts/CartContext'
+import Script from "next/script"
 
 
 export const metadata = {
@@ -22,7 +23,21 @@ const RootLayout = ({children}) => {
             <meta property="og:description" content={metadata.description} />
             <meta property="og:image" content={metadata.image} />
             <meta property="og:url" content={metadata.url} />
-            <meta name="keywords" content="hotel, belize "></meta>            
+            <meta name="keywords" content="hotel, costarica "></meta>    
+            {/* Google Analytics */}
+            <Script
+              strategy="afterInteractive"
+              src="https://www.googletagmanager.com/gtag/js?id=G-Z8JBKDGENX"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-Z8JBKDGENX');
+              `}
+            </Script>        
         </head>
         <body>
             <main className='app'>

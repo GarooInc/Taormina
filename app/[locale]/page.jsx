@@ -42,6 +42,10 @@ export default async function Menu({ params: { locale }}) {
             link: '/spa'
         },
         {
+            title: t('home:nav19'),
+            link: '/beauty-salon'
+        },
+        {
             title: t('home:nav18'),
             link: '/entertainment'
         },

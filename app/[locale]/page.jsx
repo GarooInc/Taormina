@@ -42,7 +42,7 @@ export default async function Menu({ params: { locale }}) {
             link: '/spa'
         },
         {
-            title: t('home:nav19'),
+            title: locale === 'es' ? 'Salón de Belleza' : 'Beauty Salon',
             link: '/beauty-salon'
         },
         {

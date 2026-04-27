@@ -33,7 +33,7 @@ const BeautySalonItem = ({ collection, noTags }) => {
         const message = currentLocale === 'es'
             ? `Hola, me gustaría solicitar información sobre ${title} (${price}) por favor.`
             : `Hello, I would like to request information about ${title} (${price}) please.`;
-        window.open(`https://wa.me/50660427116?text=${encodeURIComponent(message)}`, '_blank');
+        window.open(`https://wa.me/50670749478?text=${encodeURIComponent(message)}`, '_blank');
     };
 
     const uniqueTags = [...new Set(items.map(item => item[`tag_${currentLocale}`]))].filter(Boolean).sort((a, b) => b.localeCompare(a));

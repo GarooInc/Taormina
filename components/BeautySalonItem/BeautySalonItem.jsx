@@ -4,8 +4,6 @@ import Image from 'next/image';
 import PocketBase from 'pocketbase';
 import { useTranslation } from 'react-i18next';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { useCart } from '@/contexts/CartContext';
-
 const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 const pb = new PocketBase(backendUrl);
 pb.autoCancellation(false);
@@ -14,7 +12,6 @@ const BeautySalonItem = ({ collection, noTags }) => {
     const [items, setItems] = useState([]);
     const [filter, setFilter] = useState(null);
     const { t, i18n } = useTranslation();
-    const { dispatch } = useCart();
     const currentLocale = i18n.language;
     const scrollContainerRef = useRef(null);
 
@@ -31,16 +28,12 @@ const BeautySalonItem = ({ collection, noTags }) => {
     }, [collection]);
 
     const addToCart = (item) => {
-        dispatch({
-            type: 'ADD_ITEM',
-            payload: {
-                ...item,
-                Title: item[`title_${currentLocale}`],
-                Variant: item.variant || "",
-                Price: item.price,
-            },
-        });
-        alert(currentLocale === 'es' ? 'Agregado al carrito' : 'Added to cart');
+        const title = item[`title_${currentLocale}`];
+        const price = item.price;
+        const message = currentLocale === 'es'
+            ? `Hola, me gustaría solicitar información sobre ${title} (${price}) por favor.`
+            : `Hello, I would like to request information about ${title} (${price}) please.`;
+        window.open(`https://wa.me/50660427116?text=${encodeURIComponent(message)}`, '_blank');
     };
 
     const uniqueTags = [...new Set(items.map(item => item[`tag_${currentLocale}`]))].filter(Boolean).sort((a, b) => b.localeCompare(a));
@@ -94,7 +87,7 @@ const BeautySalonItem = ({ collection, noTags }) => {
                                 {item.price}
                             </p>
                             <button className='green_button w-[200px] absolute bottom-4 right-4' onClick={() => addToCart(item)}>
-                                {currentLocale === 'es' ? 'Añadir al carrito' : 'Add to cart'}
+                                {currentLocale === 'es' ? 'Solicitar información' : 'Request information'}
                             </button>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/components/TranslationsProvider'
-import FooterCart from '@/components/FooterCart/FooterCart'
+import FooterItem from '@/components/FooterItem/FooterItem'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import BeautySalonItem from '@/components/BeautySalonItem/BeautySalonItem'
 import HeaderItem from '@/components/HeaderItem/HeaderItem'
@@ -19,7 +19,7 @@ return (
             <h1 className="italictiempos_title text-primary uppercase">{t('beauty-salon:title')}</h1>
             <LanguageSwitcher />
             <BeautySalonItem collection={"Beauty_Salon"} />
-            <FooterCart transparent />
+            <FooterItem transparent logo={"v2"} />
         </div>
     </TranslationsProvider>
   )
